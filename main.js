@@ -142,7 +142,19 @@ btnLoan.addEventListener('click', function(e){
       inputLoanAmount.value = ''
       updateUI(currentAcc)
     }
-  })
+})
+
+// Tizimdan chiqish
+btnClose.addEventListener('click', function(e){
+    e.preventDefault();
+    if(currentAcc.pin === Number(inputClosePin.value) && currentAcc.user === inputCloseUsername.value){
+      const delAcc = accounts.findIndex(acc => acc.user === currentAcc.user)
+      accounts.splice(delAcc, 1)
+      containerApp.style.opacity = 0
+      inputClosePin.value = inputCloseUsername.value = ''
+      labelWelcome.textContent = 'Log in to get started'
+    }
+})  
 
 
 
