@@ -115,7 +115,7 @@ const displaySummary = function(account){
     const outcomes = account.movements.filter(mov => mov < 0).reduce((acc, mov) => acc + mov)
     labelSumOut.innerHTML = `${Math.abs(outcomes)}€`
     const interst = account.movements.filter(mov => mov > 0).map(deposit => (deposit * account.interestRate)/100).reduce((acc, mov) => acc + mov)
-    labelSumInterest.innerHTML = `${interst}€`
+    labelSumInterest.innerHTML = `${Math.floor(interst)}€`
 }
 
 // Sortlash
