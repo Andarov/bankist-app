@@ -235,7 +235,7 @@ tr:nth-child(even) {
   }
   
   .movements__row {
-    padding: 2.25rem 4rem;
+    padding: 1.75rem 3rem;
     display: flex;
     align-items: center;
     border-bottom: 1px solid #eee;
@@ -313,7 +313,7 @@ tr:nth-child(even) {
   /* OPERATIONS */
   .operation {
     border-radius: 1rem;
-    padding: 3rem 4rem;
+    padding: 2rem 3rem;
     color: #333;
   }
   
