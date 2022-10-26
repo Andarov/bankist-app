@@ -81,7 +81,7 @@ btnLogin.addEventListener('click', function(e){
   if(currentAcc.pin === Number(inputLoginPin.value)){
     containerApp.style.opacity = 100;
     inputLoginPin.value = inputLoginUsername.value = '';
-    labelWelcome.textContent = `Welcome, ${currentAcc.owner.split(' ')[0]}`;
+    labelWelcome.textContent = `Xush kelibsiz, ${currentAcc.owner.split(' ')[0]}`;
   }
   updateUI(currentAcc)
 })
