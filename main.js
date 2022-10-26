@@ -131,6 +131,17 @@ btnTransfer.addEventListener('click', function(e){
       updateUI(currentAcc)
       inputTransferTo.value = inputTransferAmount.value = ''
     }
+})
+
+// Kredit olish
+btnLoan.addEventListener('click', function(e){
+    e.preventDefault();
+    const loan = Number(Math.floor(inputLoanAmount.value));
+    if(loan > 0 && currentAcc.movements.some(mov => mov >= loan * 0.1)){
+      currentAcc.movements.push(loan);
+      inputLoanAmount.value = ''
+      updateUI(currentAcc)
+    }
   })
 
 
