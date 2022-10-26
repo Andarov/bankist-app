@@ -246,7 +246,7 @@ tr:nth-child(even) {
     text-transform: uppercase;
     font-weight: 500;
     color: #fff;
-    padding: 0.1rem 1rem;
+    padding: 0.4rem 2rem;
     border-radius: 10rem;
     margin-right: 2rem;
   }
@@ -258,11 +258,11 @@ tr:nth-child(even) {
     color: #666;
   }
   
-  .movements__type--deposit {
+  .movements__type--kirim {
     background-image: linear-gradient(to top left, #39b385, #9be15d);
   }
   
-  .movements__type--withdrawal {
+  .movements__type--chiqim {
     background-image: linear-gradient(to top left, #e52a5a, #ff585f);
   }
   

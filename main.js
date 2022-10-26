@@ -58,6 +58,13 @@ const currencies = new Map([
   ['GBP', 'Pound sterling'],
 ]);
 
+// Displayni yangilash
+const updateUI = function(account){
+    displayMov(account.movements);
+    displayBalance(account);
+    displaySummary(account)
+  }
+
 // User yaratish
 const createUser = function(accs){
     accs.forEach(function(acc){
@@ -78,5 +85,39 @@ btnLogin.addEventListener('click', function(e){
   }
   updateUI(currentAcc)
 })
+
+// Movementlarni displayga chiqarish
+const displayMov = function(movements, sort = false){
+    containerMovements.innerHTML = '';
+    const movs = sort ? movements.slice().sort((a, b)=> b-a) : movements
+    movs.forEach(function(mov, i){
+      const type = mov > 0 ? 'kirim' : 'chiqim';
+      const html = `
+      <div class="movements__row">
+        <div class="movements__type movements__type--${type}">${i + 1} ${type}</div>
+        <div class="movements__value">${mov}€</div>
+      </div>
+      `
+      containerMovements.insertAdjacentHTML('afterbegin', html)
+    })
+  }
+
+// Umumiy balansni chiqarish va uni displayga chiqarish
+const displayBalance = function(account) {
+    account.balance = account.movements.reduce((acc, cur) => acc + cur, 0)
+    labelBalance.innerHTML = `${account.balance}€`;
+}
+
+// Outcome income va interestlarmni hisoblash
+const displaySummary = function(account){
+    const incomes = account.movements.filter(mov => mov > 0).reduce((acc, mov) => acc + mov)
+    labelSumIn.innerHTML = `${incomes}€`
+    const outcomes = account.movements.filter(mov => mov < 0).reduce((acc, mov) => acc + mov)
+    labelSumOut.innerHTML = `${Math.abs(outcomes)}€`
+    const interst = account.movements.filter(mov => mov > 0).map(deposit => (deposit * account.interestRate)/100).reduce((acc, mov) => acc + mov)
+    labelSumInterest.innerHTML = `${interst}€`
+  }
+
+
 
 
