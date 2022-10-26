@@ -135,23 +135,23 @@ tr:nth-child(even) {
     align-items: center;
     padding-top: 30px;
     padding-bottom: 30px;
-  }
-  
-  .welcome {
+}
+
+.welcome {
     font-size: 24px;
     font-weight: 500;
-  }
-  
-  .logo {
+}
+
+.logo {
     width: 40px;
     height: 40px;
-  }
-  
-  .login {
+}
+
+.login {
     display: flex;
-  }
-  
-  .login__input {
+}
+
+.login__input {
     border: none;
     padding: 8px 16px;
     font-size: 18px;
@@ -161,87 +161,87 @@ tr:nth-child(even) {
     margin-right: 16px;
     border: 1px solid #fff;
     transition: all 0.3s;
-  }
-  
-  .login__input:focus {
+}
+
+.login__input:focus {
     outline: none;
     border: 1px solid #ccc;
-  }
-  
-  .login__input::placeholder {
+}
+
+.login__input::placeholder {
     color: #bbb;
-  }
-  
-  .login__btn {
+}
+
+.login__btn {
     border: none;
     background: none;
     font-size: 36px;
     color: inherit;
     cursor: pointer;
     transition: all 0.3s;
-  }
-  
-  .login__btn:hover,
-  .login__btn:focus,
-  .btn--sort:hover,
-  .btn--sort:focus {
+}
+
+.login__btn:hover,
+.login__btn:focus,
+.btn--sort:hover,
+.btn--sort:focus {
     outline: none;
     color: #777;
-  }
-  
-  /* MAIN */
-  .app-wrapper {
+}
+
+/* MAIN */
+.app-wrapper {
     position: relative;
     max-width: 100rem;
     display: grid;
     grid-template-columns: 4fr 3fr;
     grid-template-rows: auto repeat(3, 15rem) auto;
     gap: 2rem;
-  
+    
     /* NOTE This creates the fade in/out anumation */
     opacity: 0;
     transition: all 1s;
-  }
-  
-  .balance {
+}
+
+.balance {
     grid-column: 1 / span 2;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-  }
-  
-  .balance__label {
+}
+
+.balance__label {
     font-size: 2.2rem;
     font-weight: 500;
     margin-bottom: -0.2rem;
-  }
-  
-  .balance__date {
+}
+
+.balance__date {
     font-size: 1.4rem;
     color: #888;
-  }
-  
-  .balance__value {
+}
+
+.balance__value {
     font-size: 3.5rem;
     font-weight: 400;
-  }
-  
-  /* MOVEMENTS */
-  .movements {
+}
+
+/* MOVEMENTS */
+.movements {
     grid-row: 2 / span 3;
     background-color: #fff;
     border-radius: 1rem;
     overflow: scroll;
-  }
-  
-  .movements__row {
+}
+
+.movements__row {
     padding: 1.75rem 3rem;
     display: flex;
     align-items: center;
     border-bottom: 1px solid #eee;
-  }
-  
-  .movements__type {
+}
+
+.movements__type {
     font-size: 1.1rem;
     text-transform: uppercase;
     font-weight: 500;
@@ -249,112 +249,112 @@ tr:nth-child(even) {
     padding: 0.4rem 2rem;
     border-radius: 10rem;
     margin-right: 2rem;
-  }
-  
-  .movements__date {
+}
+
+.movements__date {
     font-size: 1.1rem;
     text-transform: uppercase;
     font-weight: 500;
     color: #666;
-  }
-  
-  .movements__type--kirim {
+}
+
+.movements__type--kirim {
     background-image: linear-gradient(to top left, #39b385, #9be15d);
-  }
-  
-  .movements__type--chiqim {
+}
+
+.movements__type--chiqim {
     background-image: linear-gradient(to top left, #e52a5a, #ff585f);
-  }
-  
-  .movements__value {
+}
+
+.movements__value {
     font-size: 1.7rem;
     margin-left: auto;
-  }
-  
-  /* SUMMARY */
-  .summary {
+}
+
+/* SUMMARY */
+.summary {
     grid-row: 5 / 6;
     display: flex;
     align-items: center;
     padding: 0 0.3rem;
     margin-top: 1rem;
-  }
-  
-  .summary__label {
+}
+
+.summary__label {
     font-size: 1.2rem;
     font-weight: 500;
     text-transform: uppercase;
     margin-right: 0.8rem;
-  }
-  
-  .summary__value {
+}
+
+.summary__value {
     font-size: 2.2rem;
     margin-right: 2.5rem;
-  }
-  
-  .summary__value--in,
-  .summary__value--interest {
+}
+
+.summary__value--in,
+.summary__value--interest {
     color: #66c873;
-  }
-  
-  .summary__value--out {
+}
+
+.summary__value--out {
     color: #f5465d;
-  }
-  
-  .btn--sort {
+}
+
+.btn--sort {
     margin-left: auto;
     border: none;
     background: none;
     font-size: 1.3rem;
     font-weight: 500;
     cursor: pointer;
-  }
-  
-  /* OPERATIONS */
-  .operation {
+}
+
+/* OPERATIONS */
+.operation {
     border-radius: 1rem;
     padding: 2rem 3rem;
     color: #333;
-  }
-  
-  .operation--transfer {
+}
+
+.operation--transfer {
     background-image: linear-gradient(to top left, #ffb003, #ffcb03);
-  }
-  
-  .operation--loan {
+}
+
+.operation--loan {
     background-image: linear-gradient(to top left, #39b385, #9be15d);
-  }
-  
-  .operation--close {
+}
+
+.operation--close {
     background-image: linear-gradient(to top left, #e52a5a, #ff585f);
-  }
-  
-  h2 {
+}
+
+h2 {
     margin-bottom: 1.5rem;
     font-size: 1.7rem;
     font-weight: 600;
     color: #333;
-  }
-  
-  .form {
+}
+
+.form {
     display: grid;
     grid-template-columns: 2.5fr 2.5fr 1fr;
     grid-template-rows: auto auto;
     gap: 0.4rem 1rem;
-  }
-  
-  /* Exceptions for interst */
-  .form.form--loan {
+}
+
+/* Exceptions for interst */
+.form.form--loan {
     grid-template-columns: 2.5fr 1fr 2.5fr;
-  }
-  .form__label--loan {
+}
+.form__label--loan {
     font-size: 18px;
     line-height: 1.2;
     grid-row: 2;
-  }
-  /* End exceptions */
-  
-  .form__input {
+}
+/* End exceptions */
+
+.form__input {
     width: 100%;
     border: none;
     background-color: rgba(255, 255, 255, 0.4);
@@ -365,49 +365,50 @@ tr:nth-child(even) {
     padding: 0.3rem 1rem;
     border-radius: 0.7rem;
     transition: all 0.3s;
-  }
-  
-  .form__input:focus {
+}
+
+.form__input:focus {
     outline: none;
     background-color: rgba(255, 255, 255, 0.6);
-  }
-  
-  .form__label {
+}
+
+.form__label {
     font-size: 1.3rem;
     text-align: center;
-  }
-  
-  .form__btn {
+}
+
+.form__btn {
     border: none;
     border-radius: 0.7rem;
     font-size: 1.8rem;
     background-color: #fff;
     cursor: pointer;
     transition: all 0.3s;
-  }
-  
-  .form__btn:focus {
+}
+
+.form__btn:focus {
     outline: none;
     background-color: rgba(255, 255, 255, 0.8);
-  }
-  
-  .logout-timer {
+}
+
+.logout-timer {
     padding: 0 0.3rem;
     margin-top: 1.9rem;
     text-align: right;
     font-size: 1.25rem;
-  }
-  
-  .timer {
-    font-weight: 600;
-  }
+}
 
-@media (max-width: 767px) {
+.timer {
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
     .header {
         padding-top: 20px;
         padding-bottom: 20px;
     }
-     
+    
     .main {
         padding-top: 20px;
         padding-bottom: 70px;
@@ -415,13 +416,131 @@ tr:nth-child(even) {
     .app-link {
         font-size: 14px;
     }
-
+    
     .main-text {
         font-size: 14px;
     }
-
+    
     th, td {
         padding: 4px;
         font-size: 12px;
+    }
+    
+    .welcome{
+        display: none;
+    }
+    form{
+        display: flex;
+        align-items: center;
+    }
+    .login__input{
+        width: 100px;
+        height: 2rem;
+    }
+    .app-wrapper{
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .summary{
+        width: 100%;
+    }
+    .summary p{
+        font-size: 1rem;
+    }
+}
+
+@media(max-width: 576px){
+    .summary{
+        padding: 0;
+        margin: 0;
+    }
+    .summary p{
+        font-size: .8rem;
+    }
+    .btn--sort{
+        position: absolute;
+        margin-top: -5rem;
+        margin-left: 30%;
+        text-align: center;
+    }
+    .movements__value{
+        font-size: 1rem;
+    }
+    .movements__type{
+        font-size: .8rem;
+    }
+    .balance__value{
+        font-size: 2rem;
+    }
+    .balance__label{
+        font-size: 1.5rem;
+    }
+    .operation h2{
+        font-size: 1.5rem;
+    }
+    .form__input{
+        padding: .1rem;
+    }
+    .form__btn{
+        font-size: 1rem;
+        padding: .3rem;
+    }
+    .form__label{
+        font-size: 1rem;
+    }
+}
+@media(max-width: 450px){
+    .summary p{
+        font-size: .6rem;
+    }
+    .operation h2{
+        font-size: 1.2rem;
+    }
+    .form__input{
+        padding: .3rem;
+        font-size: 1rem;
+    }
+    .form__btn{
+        font-size: 1rem;
+        padding: .3rem;
+    }
+    .form__label{
+        font-size: .8rem;
+    }
+    .summary__value{
+        font-size: .8rem;
+        padding: 0;
+        margin-right: 2rem;
+    }
+}
+@media(max-width: 400px){
+    .login__input{
+        width: 60px;
+        height: 1rem;
+        padding: 1px;
+        font-size: 1rem;
+        margin: 0 0 0 .5rem;        
+    }
+    .login__btn{
+        font-size: 1rem;
+    }
+    .balance__label{
+        font-size: 1rem;
+    }
+    .summary__value{
+        font-size: .8rem;
+        padding: 0;
+        margin-right: 2rem;
+    }
+    .date{
+        font-size: 1rem;
+    }
+    .balance__value{
+        font-size: 2rem;
+    }
+    .movements__type{
+        padding: .4rem 1rem;
     }
 }

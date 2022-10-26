@@ -5,116 +5,116 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bankist</title>
-
+    
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap" rel="stylesheet"/>
-
+    
     <!-- STYLES -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-
+    
     <!-- TOP NAVIGATION -->
     <nav class="nav-container container">
         <p class="welcome">Boshlash uchun tizimga kiring</p>
         <img src="./img/logo.png" alt="Logo" class="logo" />
         <form class="login">
-          <input
+            <input
             type="text"
             placeholder="user"
             class="login__input login__input--user"
-          />
-
-          <input
+            />
+            
+            <input
             type="text"
             placeholder="PIN"
             maxlength="4"
             class="login__input login__input--pin"
-          />
-          <button class="login__btn">&rarr;</button>
+            />
+            <button class="login__btn">&rarr;</button>
         </form>
-      </nav>
-  
-      <main class="app-container container">
+    </nav>
+    
+    <main class="app-container container">
         <div class="app-wrapper">
             <!-- BALANCE -->
             <div class="balance">
-              <div>
-                <p class="balance__label">Joriy balans</p>
-                <p class="balance__date">
-                    <span class="date">05/03/2037</span>
-                </p>
-              </div>
-              <p class="balance__value">0000€</p>
+                <div>
+                    <p class="balance__label">Joriy balans</p>
+                    <p class="balance__date">
+                        <span class="date">05/03/2037</span>
+                    </p>
+                </div>
+                <p class="balance__value">0000€</p>
             </div>
             <!-- MOVEMENTS -->
             <div class="movements">
-              <div class="movements__row">
-                <div class="movements__type movements__type--kirim">2 kirim</div>
-                <div class="movements__date">3 days ago</div>
-                <div class="movements__value">4 000€</div>
-              </div>
-              <div class="movements__row">
-                <div class="movements__type movements__type--chiqim">
-                  1 chiqim
+                <div class="movements__row">
+                    <div class="movements__type movements__type--kirim">2 kirim</div>
+                    <div class="movements__date">3 days ago</div>
+                    <div class="movements__value">4 000€</div>
                 </div>
-                <div class="movements__date">24/01/2037</div>
-                <div class="movements__value">-378€</div>
-              </div>
+                <div class="movements__row">
+                    <div class="movements__type movements__type--chiqim">
+                        1 chiqim
+                    </div>
+                    <div class="movements__date">24/01/2037</div>
+                    <div class="movements__value">-378€</div>
+                </div>
             </div>
             <!-- SUMMARY -->
             <div class="summary">
-              <p class="summary__label">Kirim</p>
-              <p class="summary__value summary__value--in">0000€</p>
-              <p class="summary__label">Chiqim</p>
-              <p class="summary__value summary__value--out">0000€</p>
-              <p class="summary__label">Interest</p>
-              <p class="summary__value summary__value--interest">0000€</p>
-              <button class="btn--sort">&downarrow; Saralash</button>
+                <p class="summary__label">Kirim</p>
+                <p class="summary__value summary__value--in">0000€</p>
+                <p class="summary__label">Chiqim</p>
+                <p class="summary__value summary__value--out">0000€</p>
+                <p class="summary__label">Interest</p>
+                <p class="summary__value summary__value--interest">0000€</p>
+                <button class="btn--sort">&downarrow; Saralash</button>
             </div>
             <!-- OPERATION: TRANSFERS -->
             <div class="operation operation--transfer">
-              <h2>Pul o'tkazish</h2>
-              <form class="form form--transfer">
-                <input type="text" class="form__input form__input--to" />
-                <input type="number" class="form__input form__input--amount" />
-                <button class="form__btn form__btn--transfer">&rarr;</button>
-                <label class="form__label">ga o'tkazish</label>
-                <label class="form__label">Miqdori</label>
-              </form>
+                <h2>Pul o'tkazish</h2>
+                <form class="form form--transfer">
+                    <input type="text" class="form__input form__input--to" />
+                    <input type="number" class="form__input form__input--amount" />
+                    <button class="form__btn form__btn--transfer">&rarr;</button>
+                    <label class="form__label">ga o'tkazish</label>
+                    <label class="form__label">Miqdori</label>
+                </form>
             </div>
             <!-- OPERATION: LOAN -->
             <div class="operation operation--loan">
-              <h2>Kredit so'rash</h2>
-              <form class="form form--loan">
-                <input type="number" class="form__input form__input--loan-amount" />
-                <button class="form__btn form__btn--loan">&rarr;</button>
-                <label class="form__label form__label--loan">Miqdori(kirimning 10barobaricha)</label>
-              </form>
+                <h2>Kredit so'rash</h2>
+                <form class="form form--loan">
+                    <input type="number" class="form__input form__input--loan-amount" />
+                    <button class="form__btn form__btn--loan">&rarr;</button>
+                    <label class="form__label form__label--loan">Miqdori(kirimning 10barobaricha)</label>
+                </form>
             </div>
             <!-- OPERATION: CLOSE -->
             <div class="operation operation--close">
-              <h2>Hisobni yopish</h2>
-              <form class="form form--close">
-                <input type="text" class="form__input form__input--user" />
-                <input
-                  type="password"
-                  maxlength="6"
-                  class="form__input form__input--pin"
-                />
-                <button class="form__btn form__btn--close">&rarr;</button>
-                <label class="form__label">Userni kiriting</label>
-                <label class="form__label">PINni kiriting</label>
-              </form>
+                <h2>Hisobni yopish</h2>
+                <form class="form form--close">
+                    <input type="text" class="form__input form__input--user" />
+                    <input
+                    type="password"
+                    maxlength="6"
+                    class="form__input form__input--pin"
+                    />
+                    <button class="form__btn form__btn--close">&rarr;</button>
+                    <label class="form__label">Userni kiriting</label>
+                    <label class="form__label">PINni kiriting</label>
+                </form>
             </div>
             <!-- LOGOUT TIMER -->
             <p class="logout-timer">
                 Siz tizimdan <span class="timer">05:00</span> chiqasiz 
             </p>
         </div>
-      </main>
+    </main>
     
-      <script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
