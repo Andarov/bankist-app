@@ -118,6 +118,14 @@ const displaySummary = function(account){
     labelSumInterest.innerHTML = `${interst}€`
 }
 
+// Sortlash
+let sorted = false
+btnSort.addEventListener('click', function(e){
+  e.preventDefault();
+  displayMov(currentAcc.movements, !sorted)
+  sorted = !sorted
+})
+
 // Transfer qilish
 btnTransfer.addEventListener('click', function(e){
     e.preventDefault();
