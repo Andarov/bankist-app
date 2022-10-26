@@ -100,7 +100,7 @@ const displayMov = function(movements, sort = false){
       `
       containerMovements.insertAdjacentHTML('afterbegin', html)
     })
-  }
+}
 
 // Umumiy balansni chiqarish va uni displayga chiqarish
 const displayBalance = function(account) {
@@ -116,7 +116,22 @@ const displaySummary = function(account){
     labelSumOut.innerHTML = `${Math.abs(outcomes)}€`
     const interst = account.movements.filter(mov => mov > 0).map(deposit => (deposit * account.interestRate)/100).reduce((acc, mov) => acc + mov)
     labelSumInterest.innerHTML = `${interst}€`
-  }
+}
+
+// Transfer qilish
+btnTransfer.addEventListener('click', function(e){
+    e.preventDefault();
+    const reciever = accounts.find(acc => acc.user === inputTransferTo.value)
+    const amount = Number(inputTransferAmount.value)
+    if(amount > 0 && currentAcc.balance >= amount && reciever.user !== currentAcc.user) {
+      currentAcc.movements.push(-amount)
+      currentAcc.balance - amount
+      reciever.movements.push(amount)
+      reciever.balance + amount
+      updateUI(currentAcc)
+      inputTransferTo.value = inputTransferAmount.value = ''
+    }
+  })
 
 
 
