@@ -64,6 +64,7 @@ const updateUI = function(account){
   displayMov(account.movements);
   displayBalance(account);
   displaySummary(account)
+  displayDate()
 }
 
 // User yaratish
@@ -73,6 +74,21 @@ const createUser = function(accs){
   })
 }
 createUser(accounts);
+
+// Displayga joriy vaqtni chiqarish
+const displayDate = function(){
+  const now = new Date()
+  const options = {
+    hour: 'numeric',
+    minute: 'numeric',
+    day: 'numeric',
+    month: '2-digit',
+    year: 'numeric',
+  }
+  const locale = navigator.language;
+  labelDate.textContent = new Intl.DateTimeFormat(locale, options).format(now)
+}
+
 
 // Login qilish
 let currentAcc; 
@@ -84,17 +100,8 @@ btnLogin.addEventListener('click', function(e){
     inputLoginPin.value = inputLoginUsername.value = '';
     labelWelcome.textContent = `Xush kelibsiz, ${currentAcc.owner.split(' ')[0]}`;
   }
-  const now = new Date()
-  const options = {
-    hour: 'numeric',
-    minute: 'numeric',
-    day: 'numeric',
-    month: '2-digit',
-    year: 'numeric',
-  }
-  const locale = navigator.language;
-  labelDate.textContent = new Intl.DateTimeFormat(locale, options).format(now)
   
+
   updateUI(currentAcc)
 })
 
