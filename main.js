@@ -65,6 +65,7 @@ const updateUI = function(account){
   displayBalance(account);
   displaySummary(account)
   displayDate()
+  setTime()
 }
 
 // User yaratish
@@ -89,9 +90,35 @@ const displayDate = function(){
   labelDate.textContent = new Intl.DateTimeFormat(locale, options).format(now)
 }
 
+// Tizimdan chiqish vaqtini o'rnatish
+const startTimer = function(){
+  const timerFunc = (function(){
+    const min = String(Math.trunc(time / 60)).padStart(2, 0)
+    const sec = String(time % 60).padStart(2, 0)
+    labelTimer.textContent = `${min}:${sec}`
+    
+    if (time === 0) {
+      clearInterval(timer);
+      containerApp.style.opacity = 0;
+      labelWelcome.textContent = 'Boshlash uchun tizimga kiring';
+    }
+    
+    time--
+    
+  })
+  let time = 300
+  const timer = setInterval(timerFunc, 1000)
+  return timer
+}
+
+// SetTimeOut funksiyasi
+const setTime = function(){
+  if(timer)clearInterval(timer)
+  timer = startTimer()
+}
 
 // Login qilish
-let currentAcc; 
+let currentAcc, timer; 
 btnLogin.addEventListener('click', function(e){
   e.preventDefault()
   currentAcc = accounts.find(acc => acc.user === inputLoginUsername.value)
@@ -100,7 +127,6 @@ btnLogin.addEventListener('click', function(e){
     inputLoginPin.value = inputLoginUsername.value = '';
     labelWelcome.textContent = `Xush kelibsiz, ${currentAcc.owner.split(' ')[0]}`;
   }
-  
 
   updateUI(currentAcc)
 })
@@ -182,6 +208,7 @@ btnClose.addEventListener('click', function(e){
     labelWelcome.textContent = 'Log in to get started'
   }
 })  
+
 
 
 
