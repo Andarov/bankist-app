@@ -85,12 +85,15 @@ btnLogin.addEventListener('click', function(e){
     labelWelcome.textContent = `Xush kelibsiz, ${currentAcc.owner.split(' ')[0]}`;
   }
   const now = new Date()
-  const day = `${now.getDate()}`.padStart(2, 0);
-  const month = `${now.getDate()}`.padStart(2, 0);
-  const year = now.getFullYear();
-  const hour = now.getHours();
-  const minute = `${now.getMinutes()}`.padStart(2, 0);
-  labelDate.textContent = `${day}/${month}/${year}, ${hour}:${minute}`
+  const options = {
+    hour: 'numeric',
+    minute: 'numeric',
+    day: 'numeric',
+    month: '2-digit',
+    year: 'numeric',
+  }
+  const locale = navigator.language;
+  labelDate.textContent = new Intl.DateTimeFormat(locale, options).format(now)
   
   updateUI(currentAcc)
 })
